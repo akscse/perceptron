@@ -1,3 +1,3 @@
 from .perceptron import Perecptron
-from .activation_function import Sigmoid
+from .step_function import StepFunction
 from .input_read import Spatial
