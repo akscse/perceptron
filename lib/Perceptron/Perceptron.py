@@ -13,7 +13,6 @@ class Perecptron:
         assert type(input_vec) == np.array
         mul_input_weight = input_vec.dot(weight) + bias
         summation_output = self.activation(mul_input_weight)
-        output
         return summation_output
 
 
