@@ -1,4 +1,5 @@
 import numpy as np
+
 class Perecptron:
     def __init__(self, activation):
         self.activation = activation
