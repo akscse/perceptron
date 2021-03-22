@@ -2,8 +2,8 @@ import numpy as np
 import sys
 
 class Perecptron:
-    def __init__(self, activation):
-        self.activation = activation
+    def __init__(self, step_function):
+        self.step_function = step_function
         return
 
     def output(self, input_vec, weight, bias):
@@ -15,7 +15,7 @@ class Perecptron:
         try:
             assert type(input_vec) == type(np.array([]))
             mul_input_weight = input_vec.dot(weight) + bias
-            out = [self.activation(val) for val in mul_input_weight].sum()
+            out = [self.step_function(val) for val in mul_input_weight].sum()
             return out
         except AssertionError:
             return "input_vec not a numpy array"
